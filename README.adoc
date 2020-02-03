@@ -93,4 +93,21 @@ Once the container image has been built and deployed in Kubernetes, the integrat
 mvn test -Dtest=*KT
 ----
 
-The test is disabled by default and has to be enabled using `-Dtest`. https://fabric8.io/guide/testing.html[Integration Testing] and https://fabric8.io/guide/arquillian.html[Fabric8 Arquillian Extension] provide more information on writing full fledged black box integration tests for Kubernetes.
+The test is disabled by default and has to be enabled using `-Dtest`.
+https://fabric8.io/guide/testing.html[Integration Testing] and
+https://fabric8.io/guide/arquillian.html[Fabric8 Arquillian Extension]
+provide more information on writing full fledged black box integration tests for Kubernetes.
+
+
+== XXX
+
+oc login -u developer -p developer
+
+oc get projects --as system:admin
+
+oc new-project myproject
+
+oc project myproject
+
+oc adm policy add-scc-to-user anyuid -z default -n myproject --as system:admin
+
